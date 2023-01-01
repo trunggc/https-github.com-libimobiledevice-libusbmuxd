@@ -177,3 +177,7 @@ jobs:
       with:
         name: libusbmuxd-latest_${{ matrix.arch }}-${{ env.dest }}
         path: libusbmuxd.tar
+    - name: Download a single artifact
+      uses: actions/download-artifact@v3
+    - name: Test Download
+      run: ls -R
